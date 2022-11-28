@@ -10,7 +10,8 @@ async function processfolder(folder) {
  
       const files = fs.readdirSync(folder);
        console.log("this is the value of folder ", files);
-      const data = await fs.promises.readFile(folder+files[0], 'utf8')
+       console.log("this is the custom file ", "./"+folder+files[0]);
+      const data = await fs.promises.readFile("./"+folder+files[0], 'utf8')
       console.log("data---->",data);
     
       
