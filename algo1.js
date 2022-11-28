@@ -33,9 +33,15 @@ const outputFolder = '/data/outputs'
 
 async function countrows( file) {
   console.log('Start counting for ' + file)
-  const data = await fs.promises.readFile(file, 'utf8')
-
-  console.log('Finished. We have this data ' + data )
+  let data = await fs.promises.readFile(file, 'utf8')
+  data = JSON.parse(data);
+  let result; 
+  if(Array.isArray(data)&& data.length>0){
+    result = data.map( item => {
+        return item.email;
+    } );
+  }
+  console.log('Finished. We have this data  ' + result )
 }
 
 async function processfolder(folder) {
