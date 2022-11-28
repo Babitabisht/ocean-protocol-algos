@@ -12,7 +12,7 @@ async function processfolder(folder) {
        console.log("this is the value of folder ", files);
  
  
-      const files = fs.readdirSync("./);
+      const files = fs.readdirSync("./");
        console.log("this is files in current folder ", files);
       
 //       const data = await fs.promises.readFile('./data/inputs/algoCustomData.json', 'utf8')
