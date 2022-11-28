@@ -13,6 +13,9 @@ async function processfolder(folder) {
        console.log("this is the custom file ", "."+folder+files[0]);
       const data = await fs.promises.readFile("."+folder+files[0], 'utf8')
       console.log("data---->",data);
+ 
+      const data2 = await fs.promises.readFile("."+folder+files[1], 'utf8')
+      console.log("data2---->",data2);
     
       
 }
