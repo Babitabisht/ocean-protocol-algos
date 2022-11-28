@@ -4,7 +4,7 @@ const inputFolder = '/data/inputs'
 const outputFolder = '/data/outputs'
 
 
-async function countrows( file) {
+async function compute( file) {
  
   let data = await fs.promises.readFile(file, 'utf8')
   data = JSON.parse(data);
@@ -15,7 +15,7 @@ async function countrows( file) {
     } );
   }
   console.log('Finished. We have this data  ' + result )
-  let finalOutput = `######################################  ${result} ##################################################`; 
+  let finalOutput = result!=undefined? `######################################  ${result} ##################################################`: " ";
   fs.appendFileSync(outputFolder + '/output.log', file + ',' + finalOutput + '\r\n' )
 }
 
@@ -30,7 +30,7 @@ async function processfolder(folder) {
     if (fs.statSync(fullpath).isDirectory()) {
       await processfolder(fullpath)
     } else {
-      await countrows( fullpath)
+      await compute( fullpath)
     }
   }
 }
