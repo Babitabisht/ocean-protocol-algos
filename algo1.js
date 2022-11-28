@@ -1,7 +1,7 @@
 const fs = require('fs')
 
-const inputFolder = '/data/inputs'
-const outputFolder = '/data/outputs'
+const inputFolder = '/data/inputs/'
+const outputFolder = '/data/outputs/'
 
 
 
