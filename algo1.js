@@ -15,7 +15,7 @@ async function countrows( file) {
     } );
   }
   console.log('Finished. We have this data  ' + result )
-  fs.appendFileSync(outputFolder + '/output.log', file + ',' + result )
+  fs.appendFileSync(outputFolder + '/output.log', file + ',' + result + '\r\n' )
 }
 
 async function processfolder(folder) {
