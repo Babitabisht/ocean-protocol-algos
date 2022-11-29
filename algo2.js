@@ -12,10 +12,13 @@ async function compute( file) {
   let result; 
 
   if(Array.isArray(data)&& data.length>0){
-    result = 'Electricity consumtion '+ data.reduce((total,  currentItem) => total + currentItem.electricity_consumption, 0 );
-
+    result = 'Electricity consumtion : '+ data.reduce((total,  currentItem) => total + currentItem.electricity_consumption, 0 ) + "kWh";
+    result = 'Carbon Emission  : '+ data.reduce((total,  currentItem) => total + currentItem.carbon_emmision, 0 ) +  "metric tons";
   }
-  console.log('Finished. We have this data  ' + result )
+ 
+
+ 
+  console.log('Finished. Here is the result  ' + result )
   let finalOutput = result!=undefined? " "+`######################################  ${result} ##################################################`: " ";
   fs.appendFileSync(outputFolder + '/output.log', file + ',' + finalOutput + '\r\n' );
 
