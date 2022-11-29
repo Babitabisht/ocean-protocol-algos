@@ -1,0 +1,58 @@
+[
+{
+   "electricity_consumption" : 10,
+   "carbon_emmision" : 10
+},
+{
+    "electricity_consumption" : 11,
+    "carbon_emmision" : 100
+},
+{
+    "electricity_consumption" : 12,
+    "carbon_emmision" : 1
+},
+{
+    "electricity_consumption" : 15,
+    "carbon_emmision" : 8
+},
+{
+    "electricity_consumption" : 16,
+    "carbon_emmision" : 2.8
+},
+{
+    "electricity_consumption" : 17,
+    "carbon_emmision" : 3.9
+},
+{
+    "electricity_consumption" : 18,
+    "carbon_emmision" : 10
+},
+{
+    "electricity_consumption" : 19,
+    "carbon_emmision" : 10.01
+},
+{
+    "electricity_consumption" : 19,
+    "carbon_emmision" : 10.01
+},
+{
+    "electricity_consumption" : 19,
+    "carbon_emmision" : 102.01
+},
+{
+    "electricity_consumption" : 16,
+    "carbon_emmision" : 100.01
+},
+{
+    "electricity_consumption" : 15,
+    "carbon_emmision" : 16.01
+},
+{
+    "electricity_consumption" : 14,
+    "carbon_emmision" : 18.01
+},
+{
+    "electricity_consumption" : 13,
+    "carbon_emmision" : 12.01
+}
+]
