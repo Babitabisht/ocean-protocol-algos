@@ -13,7 +13,7 @@ async function compute( file) {
 
   if(Array.isArray(data)&& data.length>0){
     result  = 'Electricity consumtion : '+ data.reduce((total,  currentItem) => total + currentItem.electricity_consumption, 0 ) + " kWh";
-    result += "    ";
+    result += ",    ";
     result += 'Carbon Emission  : '+ data.reduce((total,  currentItem) => total + currentItem.carbon_emmision, 0 ) +  " metric tons";
   }
  
