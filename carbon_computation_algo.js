@@ -15,9 +15,9 @@ async function compute( file) {
   let result; 
 
   if(Array.isArray(data)&& data.length>0){
-    result  = 'Electricity consumtion : '+ roundOf(data.reduce((total,  currentItem) => total + currentItem.energy_consumed, 0 )) + " kWh";
+    result  = 'Electricity consumtion : '+ await roundOf(data.reduce((total,  currentItem) => total + currentItem.energy_consumed, 0 )) + " kWh";
     result += ",    ";
-    result += 'Carbon Emission  : '+  roundOf(data.reduce((total,  currentItem) => total + currentItem.carbon_emissions_tons, 0 ))  +  " metric tons";
+    result += 'Carbon Emission  : '+ await roundOf(data.reduce((total,  currentItem) => total + currentItem.carbon_emissions_tons, 0 ))  +  " metric tons";
   }
  
 
