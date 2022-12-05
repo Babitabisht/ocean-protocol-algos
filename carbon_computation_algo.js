@@ -25,9 +25,10 @@ async function compute( file) {
  
   console.log('Finished. Here is the result  ' + result )
   let finalOutput = result!=undefined? " Finished  "+
-  `###################################### 
+  `
+  ###################################### 
    ${result} 
-   ######################################`: " ";
+  ######################################`: " ";
   fs.appendFileSync(outputFolder + '/output.log', file + ',' + finalOutput + '\r\n' );
 
 }
