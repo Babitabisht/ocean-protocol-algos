@@ -15,15 +15,17 @@ async function compute( file) {
   let result; 
 
   if(Array.isArray(data)&& data.length>0){
-    result  = 'Electricity consumtion : '+ await roundOf(data.reduce((total,  currentItem) => total + currentItem.energy_consumed, 0 )) + " kWh";
-    result += ",    ";
-    result += 'Carbon Emission  : '+ await roundOf(data.reduce((total,  currentItem) => total + currentItem.carbon_emissions_tons, 0 ))  +  " metric tons";
+      result =  `Electricity consumtion : ${await roundOf(data.reduce((total,  currentItem) => total + currentItem.energy_consumed, 0 ))} kWh,
+                 Carbon Emission        : ${await roundOf(data.reduce((total,  currentItem) => total + currentItem.carbon_emissions_tons, 0 ))}  metric tons
+       `;
   }
  
 
  
   console.log('Finished. Here is the result  ' + result )
-  let finalOutput = result!=undefined? " Finished  "+`######################################  ${result} ##################################################`: " ";
+  let finalOutput = result!=undefined? " Finished  "+`###################################### 
+                                                                ${result} 
+                                                     ######################################`: " ";
   fs.appendFileSync(outputFolder + '/output.log', file + ',' + finalOutput + '\r\n' );
 
 }
