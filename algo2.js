@@ -12,9 +12,9 @@ async function compute( file) {
   let result; 
 
   if(Array.isArray(data)&& data.length>0){
-    result  = 'Electricity consumtion : '+ data.reduce((total,  currentItem) => total + currentItem.electricity_consumption, 0 ) + " kWh";
+    result  = 'Electricity consumtion : '+ data.reduce((total,  currentItem) => total + currentItem.energy_consumed, 0 ) + " kWh";
     result += ",    ";
-    result += 'Carbon Emission  : '+ data.reduce((total,  currentItem) => total + currentItem.carbon_emmision, 0 ) +  " metric tons";
+    result += 'Carbon Emission  : '+ data.reduce((total,  currentItem) => total + currentItem.carbon_emissions_tons, 0 ) +  " metric tons";
   }
  
 
