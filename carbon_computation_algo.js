@@ -10,11 +10,13 @@ async function compute( file) {
   let data = await fs.promises.readFile(file, 'utf8');
   data = JSON.parse(data);
  
-  // removing duplicate entries
-  data=Object.values(data.reduce((acc,cur)=>Object.assign(acc,{[cur.product_id]:cur}),{}));
+  
   let result; 
 
   if(Array.isArray(data)&& data.length>0){
+   // removing duplicate entries
+   data=Object.values(data.reduce((acc,cur)=>Object.assign(acc,{[cur.product_id]:cur}),{}));
+   
    result =
 `
  Electricity consumtion : ${await roundOf(data.reduce((total,  currentItem) => total + currentItem.energy_consumed, 0 ))} kWh,
