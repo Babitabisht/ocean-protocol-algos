@@ -10,6 +10,7 @@ async function compute( file) {
   let data = await fs.promises.readFile(file, 'utf8');
   data = JSON.parse(data);
  
+  console.log("-------------data------------------",data); 
   
   let result; 
 
