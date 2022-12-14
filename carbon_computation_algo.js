@@ -8,8 +8,9 @@ async function compute( file) {
  
  console.log("file: " + file);
   let data = await fs.promises.readFile(file, 'utf8');
- 
+  data.trim();
   console.log("-------------data------------------", data); 
+  
  
   data = JSON.parse(data);
  
