@@ -11,7 +11,7 @@ async function compute( file) {
  
   console.log("-------------data------------------", data); 
  
-//   data = JSON.parse(data);
+  data = JSON.parse(data);
  
   let result; 
 
