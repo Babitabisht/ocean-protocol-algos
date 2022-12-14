@@ -8,9 +8,9 @@ async function compute( file) {
  
  console.log("file: " + file);
   let data = await fs.promises.readFile(file, 'utf8');
-  data.replaceAll("\u200B", "");
-   let re = new RegExp("\u2028|\u2029");
-    data = data.replace(re, '');
+  if (data.charCodeAt(0) === 0xFEFF) {
+  data = data.substr(1);
+  }
   console.log("-------------data------------------", data); 
   
  
